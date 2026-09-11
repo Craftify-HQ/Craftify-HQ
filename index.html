@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Craftify HQ — Intelligence & Universal Design Studio</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Plus Jakarta Sans & Prompt -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        slate: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        },
+                        sky: {
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', 'Prompt', sans-serif;
+        }
+        .bg-grid-pattern {
+            background-size: 32px 32px;
+            background-image: 
+                linear-gradient(to right, rgba(203, 213, 225, 0.25) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(203, 213, 225, 0.25) 1px, transparent 1px);
+        }
+    </style>
+</head>
+<body class="bg-[#F8FAFC] text-slate-800 antialiased selection:bg-slate-200 relative min-h-screen overflow-x-hidden">
+
+    <!-- Background Glow Effects -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[450px] bg-gradient-to-tr from-sky-200/30 via-slate-200/40 to-slate-100/50 blur-[130px] -z-10 pointer-events-none"></div>
+    <div class="absolute top-1/3 right-0 w-[450px] h-[450px] bg-slate-300/20 blur-[140px] -z-10 pointer-events-none"></div>
+
+    <!-- Grid Lines Overlay -->
+    <div class="absolute inset-0 bg-grid-pattern [mask-image:linear-gradient(to_bottom,white_15%,transparent_85%)] -z-10 pointer-events-none"></div>
+
+    <!-- 1. Header & Navigation Bar -->
+    <header class="sticky top-4 z-50 max-w-6xl mx-auto px-4">
+        <div class="bg-white/80 backdrop-blur-xl border border-slate-200/80 shadow-md shadow-slate-200/30 rounded-full px-6 h-16 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center text-white font-semibold text-sm shadow-sm group-hover:scale-105 transition-transform">
+                    C
+                </div>
+                <span class="font-bold tracking-tight text-slate-900 text-lg">Craftify <span class="text-[10px] font-semibold px-2 py-0.5 rounded-md bg-slate-100 text-slate-600 border border-slate-200">HQ</span></span>
+            </a>
+
+            <!-- Nav Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-xs font-medium text-slate-600">
+                <a href="#showcase" class="hover:text-slate-900 transition-colors">Showcase Product</a>
+                <a href="#playground" class="hover:text-slate-900 transition-colors">AI Studio</a>
+                <a href="#capabilities" class="hover:text-slate-900 transition-colors">Capabilities</a>
+                <a href="#team" class="hover:text-slate-900 transition-colors">Team Members</a>
+            </nav>
+
+            <!-- Action Buttons -->
+            <div class="flex items-center gap-2.5">
+                <!-- GitHub Org Button -->
+                <!-- ⚠️ เปลี่ยน href เป็นลิงก์ GitHub Organization ของคุณได้เลยครับ -->
+                <a href="https://github.com/Craftify-HQ" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 text-xs font-medium text-slate-700 bg-slate-100 hover:bg-slate-200 border border-slate-200 px-3 py-2 rounded-full transition-all">
+                    <svg class="w-4 h-4 fill-current text-slate-800" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
+                    </svg>
+                    <span class="hidden sm:inline">GitHub Org</span>
+                </a>
+
+                <a href="#showcase" class="text-xs font-medium bg-slate-900 text-white px-4 py-2 rounded-full hover:bg-slate-800 transition-all shadow-sm">
+                    สั่งทำเว็บทุกรูปแบบ
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Hero Section -->
+    <section class="max-w-5xl mx-auto px-6 pt-20 pb-16 text-center">
+        <!-- Live Status Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-slate-200/80 shadow-sm text-xs font-medium text-slate-700 mb-8 backdrop-blur-sm">
+            <span class="flex h-2 w-2 relative">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-sky-500"></span>
+            </span>
+            Universal Web & Digital Experience Builder
+        </div>
+
+        <!-- Primary Headline -->
+        <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-slate-900 leading-[1.15] mb-6">
+            Craft Any Web Experience into <br/>
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-slate-900 via-slate-700 to-sky-900">Intelligent Custom Layouts.</span>
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="text-base md:text-lg text-slate-600 max-w-2xl mx-auto font-light leading-relaxed mb-10">
+            บริการรับทำและออกแบบเว็บไซต์ครบวงจรทุกรูปแบบ ไม่ว่าจะเป็นเว็บอีเวนต์ พอร์ตโฟลิโอ ธุรกิจ หรือเว็บไซต์เนื่องในโอกาสพิเศษ เปลี่ยนทุกโจทย์ความคิดของคุณให้กลายเป็นผลงานดิจิทัลสุดประณีต
+        </p>
+
+        <!-- Primary & Secondary CTAs -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="#showcase" class="w-full sm:w-auto px-8 py-3.5 bg-slate-900 text-white text-sm font-medium rounded-full hover:bg-slate-800 transition-all shadow-md shadow-slate-300/50 flex items-center justify-center gap-2">
+                <span>ดูโปรดักตัวอย่างทุกประเภท</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </a>
+            <a href="#playground" class="w-full sm:w-auto px-8 py-3.5 bg-white border border-slate-200 text-slate-700 text-sm font-medium rounded-full hover:bg-slate-50 transition-all">
+                ทดลองใช้ AI Studio
+            </a>
+        </div>
+    </section>
+
+    <!-- 3. Showcase Product Section -->
+    <section id="showcase" class="max-w-5xl mx-auto px-6 py-20 border-t border-slate-200/60">
+        <div class="text-center max-w-xl mx-auto mb-16">
+            <span class="text-xs font-semibold text-sky-600 uppercase tracking-widest">Showcase Product</span>
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight mt-1">
+                โปรดักและบริการรับทำเว็บไซต์ (All-in-One Solutions)
+            </h2>
+            <p class="text-slate-500 text-xs font-light mt-2">
+                ตอบโจทย์ทุกความต้องการด้วยเทคโนโลยีดีไซน์ที่ยืดหยุ่น รองรับทั้งการใช้งานส่วนบุคคล สังคม และธุรกิจ
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 mb-12">
+            <!-- Category 1: Events & Celebrations -->
+            <div class="bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                <div>
+                    <div class="w-10 h-10 rounded-2xl bg-sky-50 text-sky-600 flex items-center justify-center font-bold text-lg mb-4">
+                        🎉
+                    </div>
+                    <span class="text-[10px] font-semibold text-sky-600 uppercase tracking-wider block mb-1">EVENT & CELEBRATION</span>
+                    <h3 class="text-base font-semibold text-slate-900 mb-2">เว็บอีเวนต์ / งานเฉลิมฉลอง</h3>
+                    <p class="text-xs text-slate-500 font-light leading-relaxed mb-4">
+                        เว็บงานแต่งงาน, งานวันเกิด, งานรับปริญญา หรือปาร์ตี้ พร้อมระบบลงชื่อเข้าร่วม (RSVP), แผนที่ และแกลเลอรีรูปภาพ
+                    </p>
+                </div>
+                <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                    <span class="text-xs font-bold text-slate-900">เริ่มต้น ฿390</span>
+                    <span class="text-[11px] text-sky-600 font-medium">ดูตัวอย่าง →</span>
+                </div>
+            </div>
+
+            <!-- Category 2: Personal & Portfolio -->
+            <div class="bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                <div>
+                    <div class="w-10 h-10 rounded-2xl bg-slate-100 text-slate-800 flex items-center justify-center font-bold text-lg mb-4">
+                        💼
+                    </div>
+                    <span class="text-[10px] font-semibold text-slate-500 uppercase tracking-wider block mb-1">PORTFOLIO & RESUME</span>
+                    <h3 class="text-base font-semibold text-slate-900 mb-2">เว็บพอร์ตโฟลิโอ / การ์ดดิจิทัล</h3>
+                    <p class="text-xs text-slate-500 font-light leading-relaxed mb-4">
+                        เว็บรวบรวมผลงานสมัครงาน, นามบัตรดิจิทัล (Link-in-bio) หรือเว็บแนะนำตัวโปรไฟล์สไตล์ มินิมอลเรียบหรู
+                    </p>
+                </div>
+                <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                    <span class="text-xs font-bold text-slate-900">เริ่มต้น ฿490</span>
+                    <span class="text-[11px] text-sky-600 font-medium">ดูตัวอย่าง →</span>
+                </div>
+            </div>
+
+            <!-- Category 3: Special Occasions & Business -->
+            <div class="bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                <div>
+                    <div class="w-10 h-10 rounded-2xl bg-slate-100 text-slate-800 flex items-center justify-center font-bold text-lg mb-4">
+                        🚀
+                    </div>
+                    <span class="text-[10px] font-semibold text-slate-500 uppercase tracking-wider block mb-1">LANDING PAGE & STORE</span>
+                    <h3 class="text-base font-semibold text-slate-900 mb-2">เว็บธุรกิจ / แบรนด์ดิ้ง</h3>
+                    <p class="text-xs text-slate-500 font-light leading-relaxed mb-4">
+                        หน้า Landing Page โปรโมตสินค้า/บริการ, เว็บหน้าร้าน หรือเว็บส่งความรู้สึกในโอกาสพิเศษตามโจทย์เฉพาะ
+                    </p>
+                </div>
+                <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                    <span class="text-xs font-bold text-slate-900">เริ่มต้น ฿590</span>
+                    <span class="text-[11px] text-sky-600 font-medium">ดูตัวอย่าง →</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Featured Detailed Showcase Card -->
+        <div class="bg-slate-900 text-white rounded-3xl p-6 md:p-10 shadow-2xl relative overflow-hidden">
+            <div class="grid md:grid-cols-12 gap-8 items-center">
+                <!-- Left Content -->
+                <div class="md:col-span-7">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-400/20 text-[11px] font-medium text-sky-300 mb-4">
+                        ★ CUSTOM WEBSITES FOR ALL PURPOSES
+                    </div>
+                    <h3 class="text-2xl md:text-3xl font-bold tracking-tight mb-4">
+                        จะโจทย์ไหน ก็เนรมิตหน้าเว็บให้ตรงใจคุณได้ทันที
+                    </h3>
+                    <p class="text-slate-300 text-xs md:text-sm font-light leading-relaxed mb-6">
+                        เรารับทำเว็บไซต์ทุกรูปแบบ ปรับแต่งองค์ประกอบได้ 100% ตอบโจทย์ทั้งงานดีไซน์สวยงาม โครงสร้างโค้ดที่รวดเร็ว และการแสดงผลที่สมบูรณ์แบบบนมือถือทุกรุ่น
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-3 text-xs mb-8">
+                        <div class="bg-white/5 border border-white/10 rounded-xl p-3">
+                            <span class="block font-semibold text-white mb-0.5">📱 Responsive Layout</span>
+                            <span class="text-slate-400 text-[11px]">แสดงผลสวยงามทุกหน้าจอ</span>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 rounded-xl p-3">
+                            <span class="block font-semibold text-white mb-0.5">🎵 Audio & Media</span>
+                            <span class="text-slate-400 text-[11px]">ใส่เพลงและวิดีโอได้อิสระ</span>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 rounded-xl p-3">
+                            <span class="block font-semibold text-white mb-0.5">⚡ Fast Loading</span>
+                            <span class="text-slate-400 text-[11px]">โหลดไว ไม่มีสะดุด</span>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 rounded-xl p-3">
+                            <span class="block font-semibold text-white mb-0.5">🔗 Domain Customization</span>
+                            <span class="text-slate-400 text-[11px]">เลือกชื่อลิงก์แชร์ได้ตามต้องการ</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <a href="#playground" class="px-6 py-3 bg-white text-slate-900 rounded-full font-medium text-xs hover:bg-slate-100 transition-all shadow-md">
+                            สั่งทำเว็บไซต์โปรดักของคุณ
+                        </a>
+                        <a href="#playground" class="text-xs font-medium text-slate-300 hover:text-white transition-colors">
+                            ทดลองใช้ระบบ AI ปรับแต่ง →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Visual Mockup -->
+                <div class="md:col-span-5">
+                    <div class="bg-slate-800 rounded-2xl p-4 border border-slate-700 shadow-xl">
+                        <div class="flex items-center gap-1.5 mb-3 pb-2 border-b border-slate-700/60">
+                            <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
+                            <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
+                            <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+                            <span class="text-[10px] text-slate-400 font-mono ml-2">craftify.app/your-project</span>
+                        </div>
+                        <div class="bg-white text-slate-800 rounded-xl p-5 text-center min-h-[220px] flex flex-col justify-between">
+                            <div class="text-[10px] uppercase font-bold text-sky-600 tracking-wider">UNIVERSAL EXPERIENCE</div>
+                            <div>
+                                <h4 class="text-base font-semibold text-slate-900 mb-1">"Custom Digital Space"</h4>
+                                <p class="text-xs text-slate-500 font-light">
+                                    ออกแบบเว็บไซต์ที่สะท้อนตัวตนและเป้าหมายของคุณได้อย่างสมบูรณ์แบบ
+                                </p>
+                            </div>
+                            <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-[10px] text-slate-400">
+                                <span>Multi-purpose Layout</span>
+                                <span class="bg-slate-100 px-2 py-0.5 rounded text-slate-600 font-medium">Live Preview</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Live Interactive Playground Section -->
+    <section id="playground" class="max-w-5xl mx-auto px-6 py-8">
+        <div class="bg-white rounded-3xl border border-slate-200/80 p-6 md:p-8 shadow-xl shadow-slate-200/40">
+            <div class="flex flex-col md:flex-row items-md-center justify-between gap-4 pb-6 border-b border-slate-100">
+                <div>
+                    <h2 class="text-lg font-semibold text-slate-900">Live AI Studio Playground</h2>
+                    <p class="text-xs text-slate-500 font-light">เลือกโทนการออกแบบเพื่อดูการประมวลผลจัดหน้าแบบ Real-time</p>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <button class="px-3.5 py-1.5 text-xs font-medium rounded-full bg-slate-900 text-white shadow-sm">มินิมอล (Minimal)</button>
+                    <button class="px-3.5 py-1.5 text-xs font-medium rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors">ทางการ/พรีเมียม (Professional)</button>
+                    <button class="px-3.5 py-1.5 text-xs font-medium rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors">สดใส/อีเวนต์ (Creative)</button>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-12 gap-6 pt-6">
+                <div class="md:col-span-5 bg-slate-50/80 rounded-2xl p-5 border border-slate-200/60 flex flex-col justify-between">
+                    <div>
+                        <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">PROMPT INPUT</div>
+                        <p class="text-xs text-slate-700 font-light leading-relaxed bg-white p-3.5 rounded-xl border border-slate-200/80 shadow-sm">
+                            "อยากได้หน้าเว็บแนะนำตัวสำหรับสมัครงานสาย Developer สไตล์มินิมอล โทนสีสะอาดตา ดูน่าเชื่อถือ"
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-200/60 flex items-center justify-between text-[11px] text-slate-500">
+                        <span>Style Matching: <strong class="text-sky-600 font-medium">Clean & Tech</strong></span>
+                        <span>Accuracy: <strong class="text-slate-800 font-medium">99.1%</strong></span>
+                    </div>
+                </div>
+
+                <div class="md:col-span-7 bg-slate-900 rounded-2xl p-6 text-white shadow-lg relative overflow-hidden flex flex-col justify-between min-h-[220px]">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">AI GENERATED LAYOUT</span>
+                        <span class="text-[10px] bg-sky-500/20 text-sky-300 border border-sky-400/30 px-2.5 py-0.5 rounded-full">Ready to Export</span>
+                    </div>
+                    <blockquote class="text-sm md:text-base font-light text-slate-100 leading-relaxed italic mb-6">
+                        "Full-Stack Developer who transforms complex concepts into clean, minimalist, and user-centric web applications."
+                    </blockquote>
+                    <div class="flex items-center justify-between text-xs text-slate-400 border-t border-slate-800 pt-4">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                            <span>Matched Template: Developer Portfolio #01</span>
+                        </div>
+                        <a href="#" class="text-sky-300 hover:text-white font-medium transition-colors">Apply Template →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Capabilities Showcase Section -->
+    <section id="capabilities" class="max-w-5xl mx-auto px-6 py-20 border-t border-slate-200/60">
+        <div class="text-center max-w-xl mx-auto mb-16">
+            <span class="text-xs font-semibold text-sky-600 uppercase tracking-widest">Capabilities</span>
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight mt-1">
+                ขีดความสามารถที่รองรับทุกจินตนาการ
+            </h2>
+            <p class="text-slate-500 text-xs font-light mt-2">
+                ผสานเทคโนโลยีการพัฒนาและศิลปะดีไซน์เข้าด้วยกัน เพื่อผลลัพธ์ที่ตรงโจทย์ที่สุด
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Capability 1 -->
+            <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:border-slate-300 hover:shadow-md transition-all">
+                <div class="w-10 h-10 rounded-2xl bg-sky-50 text-sky-600 flex items-center justify-center font-bold text-sm mb-5">
+                    01
+                </div>
+                <h3 class="text-base font-semibold text-slate-900 mb-2">Intent & Mood Parsing</h3>
+                <p class="text-xs text-slate-500 font-light leading-relaxed mb-4">
+                    วิเคราะห์วัตถุประสงค์ โทนสี และอารมณ์ของเว็บไซต์ตามที่คุณต้องการอย่างแม่นยำ ไม่ว่าจะเป็นทางการ สดใส หรือมินิมอล
+                </p>
+                <div class="text-[11px] font-medium text-slate-400 border-t border-slate-100 pt-3">
+                    ● Flexible Context Analysis
+                </div>
+            </div>
+
+            <!-- Capability 2 -->
+            <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:border-slate-300 hover:shadow-md transition-all">
+                <div class="w-10 h-10 rounded-2xl bg-slate-100 text-slate-800 flex items-center justify-center font-bold text-sm mb-5">
+                    02
+                </div>
+                <h3 class="text-base font-semibold text-slate-900 mb-2">Adaptive UI Systems</h3>
+                <p class="text-xs text-slate-500 font-light leading-relaxed mb-4">
+                    ปรับเปลี่ยนการจัดวางกริด ระยะห่าง ฟอนต์ และการแสดงผลสื่อมีเดียให้เหมาะสมกับลักษณะคอนเทนต์แต่ละรูปแบบ
+                </p>
+                <div class="text-[11px] font-medium text-slate-400 border-t border-slate-100 pt-3">
+                    ● Custom Grid & Typography
+                </div>
+            </div>
+
+            <!-- Capability 3 -->
+            <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:border-slate-300 hover:shadow-md transition-all">
+                <div class="w-10 h-10 rounded-2xl bg-slate-100 text-slate-800 flex items-center justify-center font-bold text-sm mb-5">
+                    03
+                </div>
+                <h3 class="text-base font-semibold text-slate-900 mb-2">High-Performance Hosting</h3>
+                <p class="text-xs text-slate-500 font-light leading-relaxed mb-4">
+                    ระบบโฮสติ้งประสิทธิภาพสูง โหลดไว ปลอดภัย พร้อมสร้าง Custom URL ส่งแชร์ให้ผู้ใช้งานหรือลูกค้าเปิดได้ทันที
+                </p>
+                <div class="text-[11px] font-medium text-slate-400 border-t border-slate-100 pt-3">
+                    ● Instant Global Deployment
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Team Members Section -->
+    <section id="team" class="max-w-5xl mx-auto px-6 py-20 border-t border-slate-200/60">
+        <div class="text-center max-w-xl mx-auto mb-16">
+            <span class="text-xs font-semibold text-sky-600 uppercase tracking-widest">Startup Team</span>
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight mt-1">
+                Meet the Builders Behind Craftify HQ
+            </h2>
+            <p class="text-slate-500 text-xs font-light mt-2">
+                ทีมผู้เชี่ยวชาญเบื้องหลังการพัฒนาสถาปัตยกรรม โมเดล AI และอินเทอร์เฟซผู้ใช้
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <!-- Member 1: CEO (1.jpg) -->
+            <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:border-slate-300 hover:shadow-md transition-all text-center group">
+                <div class="w-24 h-24 mx-auto rounded-2xl overflow-hidden mb-4 border border-slate-200/80 shadow-sm group-hover:scale-105 transition-transform bg-slate-100">
+                    <img src="1.png" alt="ชนันท์รัช เกตวันดี" class="w-full h-full object-cover">
+                </div>
+                <span class="text-[10px] font-mono font-medium text-slate-400 bg-slate-100 px-2.5 py-1 rounded-full border border-slate-200/60 inline-block mb-2">
+                    6752301280
+                </span>
+                <h3 class="text-base font-semibold text-slate-900">ชนันท์รัช เกตวันดี</h3>
+                <p class="text-xs font-semibold text-sky-600 mb-3">Chief Executive Officer (CEO)</p>
+                <p class="text-xs text-slate-500 font-light leading-relaxed mb-4">
+                    บริหารภาพรวมทิศทางองค์กร วิสัยทัศน์ทางธุรกิจ และการส่งมอบนวัตกรรมดิจิทัลของแพลตฟอร์ม
+                </p>
+            </div>
+
+            <!-- Member 2: CTO (2.jpg) -->
+            <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:border-slate-300 hover:shadow-md transition-all text-center group">
+                <div class="w-24 h-24 mx-auto rounded-2xl overflow-hidden mb-4 border border-slate-200/80 shadow-sm group-hover:scale-105 transition-transform bg-slate-100">
+                    <img src="2.jpg" alt="พรรศภรณ์ รักงาม" class="w-full h-full object-cover">
+                </div>
+                <span class="text-[10px] font-mono font-medium text-slate-400 bg-slate-100 px-2.5 py-1 rounded-full border border-slate-200/60 inline-block mb-2">
+                    6752300402
+                </span>
+                <h3 class="text-base font-semibold text-slate-900">พรรศภรณ์ รักงาม</h3>
+                <p class="text-xs font-semibold text-sky-600 mb-3">Chief Technology Officer (CTO)</p>
+                <p class="text-xs text-slate-500 font-light leading-relaxed mb-4">
+                    กำกับดูแลโครงสร้างเทคโนโลยีทั้งหมด วางระบบความปลอดภัย และสถาปัตยกรรมเทคนิค
+                </p>
+            </div>
+
+            <!-- Member 3: Full Stack Developer (3.jpg) -->
+            <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:border-slate-300 hover:shadow-md transition-all text-center group">
+                <div class="w-24 h-24 mx-auto rounded-2xl overflow-hidden mb-4 border border-slate-200/80 shadow-sm group-hover:scale-105 transition-transform bg-slate-100">
+                    <img src="3.jpg" alt="วราภรณ์ ศรีบุรินทร์" class="w-full h-full object-cover">
+                </div>
+                <span class="text-[10px] font-mono font-medium text-slate-400 bg-slate-100 px-2.5 py-1 rounded-full border border-slate-200/60 inline-block mb-2">
+                    6752300682
+                </span>
+                <h3 class="text-base font-semibold text-slate-900">วราภรณ์ ศรีบุรินทร์</h3>
+                <p class="text-xs font-semibold text-sky-600 mb-3">Full Stack Developer</p>
+                <p class="text-xs text-slate-500 font-light leading-relaxed mb-4">
+                    พัฒนาและเชื่อมโยงระบบทั้ง Frontend และ Backend ให้ทำงานสอดประสานกันอย่างไร้รอยต่อ
+                </p>
+            </div>
+
+            <!-- Member 4: AI Engineer (4.jpg) -->
+            <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:border-slate-300 hover:shadow-md transition-all text-center group">
+                <div class="w-24 h-24 mx-auto rounded-2xl overflow-hidden mb-4 border border-slate-200/80 shadow-sm group-hover:scale-105 transition-transform bg-slate-100">
+                    <img src="4.jpg" alt="กนกณัฐ กึ่งพุทธพงศ์" class="w-full h-full object-cover">
+                </div>
+                <span class="text-[10px] font-mono font-medium text-slate-400 bg-slate-100 px-2.5 py-1 rounded-full border border-slate-200/60 inline-block mb-2">
+                    6752300810
+                </span>
+                <h3 class="text-base font-semibold text-slate-900">กนกณัฐ กึ่งพุทธพงศ์</h3>
+                <p class="text-xs font-semibold text-sky-600 mb-3">AI Engineer</p>
+                <p class="text-xs text-slate-500 font-light leading-relaxed mb-4">
+                    วิจัยและพัฒนาระบบ AI Prompt Parsing เพื่อการวิเคราะห์โจทย์และเลือกเลย์เอาต์อัตโนมัติ
+                </p>
+            </div>
+
+            <!-- Member 5: MLOps (5.jpg) -->
+            <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:border-slate-300 hover:shadow-md transition-all text-center group">
+                <div class="w-24 h-24 mx-auto rounded-2xl overflow-hidden mb-4 border border-slate-200/80 shadow-sm group-hover:scale-105 transition-transform bg-slate-100">
+                    <img src="5.jpg" alt="รัตนาภรณ์ วรรณศรี" class="w-full h-full object-cover">
+                </div>
+                <span class="text-[10px] font-mono font-medium text-slate-400 bg-slate-100 px-2.5 py-1 rounded-full border border-slate-200/60 inline-block mb-2">
+                    6752300330
+                </span>
+                <h3 class="text-base font-semibold text-slate-900">รัตนาภรณ์ วรรณศรี</h3>
+                <p class="text-xs font-semibold text-sky-600 mb-3">MLOps Engineer</p>
+                <p class="text-xs text-slate-500 font-light leading-relaxed mb-4">
+                    ดูแลวงจรชีวิตโมเดล AI (ML Pipeline), การปรับแต่ง Performance และการ Deploy ขึ้นใช้งานจริง
+                </p>
+            </div>
+
+            <!-- Member 6: UX/UI (6.jpg) -->
+            <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:border-slate-300 hover:shadow-md transition-all text-center group">
+                <div class="w-24 h-24 mx-auto rounded-2xl overflow-hidden mb-4 border border-slate-200/80 shadow-sm group-hover:scale-105 transition-transform bg-slate-100">
+                    <img src="6.jpg" alt="ฐิติมา ธาดาบุษบง" class="w-full h-full object-cover">
+                </div>
+                <span class="text-[10px] font-mono font-medium text-slate-400 bg-slate-100 px-2.5 py-1 rounded-full border border-slate-200/60 inline-block mb-2">
+                    6752300887
+                </span>
+                <h3 class="text-base font-semibold text-slate-900">ฐิติมา ธาดาบุษบง</h3>
+                <p class="text-xs font-semibold text-sky-600 mb-3">UX/UI Designer</p>
+                <p class="text-xs text-slate-500 font-light leading-relaxed mb-4">
+                    วางโครงสร้างประสบการณ์ผู้ใช้ (UX) และออกแบบส่วนติดต่อผู้ใช้ (UI) ให้สวยงามและใช้งานง่าย
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Footer Section -->
+    <footer class="border-t border-slate-200/80 bg-white">
+        <div class="max-w-5xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+            <div class="flex items-center gap-2">
+                <span class="font-bold text-slate-900">Craftify HQ</span>
+                <span>— Intelligence & Universal Design Studio</span>
+            </div>
+            <p>© 2026 Craftify HQ. All rights reserved.</p>
+            <div class="flex space-x-6 text-slate-400">
+                <!-- ⚠️ ลิงก์ GitHub Organization ในส่วน Footer -->
+                <a href="https://github.com/Craftify-HQ" target="_blank" rel="noopener noreferrer" class="hover:text-slate-800 transition-colors flex items-center gap-1">
+                    <span>GitHub Organization</span>
+                </a>
+                <a href="#" class="hover:text-slate-600 transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-slate-600 transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
